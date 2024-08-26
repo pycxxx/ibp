@@ -1,8 +1,8 @@
-import { Product, ProductType } from "@/libs/api"
-import Image from "next/image"
+import { Product, ProductType } from '@/libs/api'
+import Image from 'next/image'
 // 這邊用 SVG 比較好，但需要另外設定，所以先用 PNG
-import affirmIcon from "./black_logo-transparent_bg.png"
-import { format } from "date-fns/format"
+import affirmIcon from './black_logo-transparent_bg.png'
+import { format } from 'date-fns/format'
 
 export interface ProductCardProps {
     data: Product

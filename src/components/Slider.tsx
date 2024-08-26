@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
 export default function Slider({ children }: PropsWithChildren<object>) {
     return (
