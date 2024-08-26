@@ -3,7 +3,7 @@ import { Product, ProductType } from './models';
 const products: Array<Product> = [
   {
     id: '1',
-    image: '/images/p1.png',
+    image: process.env.SITE_URL + '/images/p1.png',
     type: ProductType.Prebuilt,
     name: 'RDY Y60 005',
     os: 'Windows 11 Home',
@@ -18,7 +18,7 @@ const products: Array<Product> = [
   },
   {
     id: '2',
-    image: '/images/p2.png',
+    image: process.env.SITE_URL + '/images/p2.png',
     type: ProductType.Custom,
     name: 'RDY Y60 006',
     os: 'Windows 11 Home',
@@ -33,7 +33,7 @@ const products: Array<Product> = [
   },
   {
     id: '3',
-    image: '/images/p3.png',
+    image: process.env.SITE_URL + '/images/p3.png',
     type: ProductType.Custom,
     name: 'RDY Y60 007',
     os: 'Windows 11 Home',
@@ -48,7 +48,7 @@ const products: Array<Product> = [
   },
   {
     id: '4',
-    image: '/images/p4.png',
+    image: process.env.SITE_URL + '/images/p4.png',
     type: ProductType.Prebuilt,
     name: 'RDY Y60 008',
     os: 'Windows 11 Home',
@@ -63,7 +63,7 @@ const products: Array<Product> = [
   },
   {
     id: '5',
-    image: '/images/p5.png',
+    image: process.env.SITE_URL + '/images/p5.png',
     type: ProductType.Prebuilt,
     name: 'RDY Y60 009',
     os: 'Windows 11 Home',
@@ -78,7 +78,7 @@ const products: Array<Product> = [
   },
   {
     id: '6',
-    image: '/images/p6.png',
+    image: process.env.SITE_URL + '/images/p6.png',
     type: ProductType.Custom,
     name: 'RDY Y60 010',
     os: 'Windows 11 Home',
