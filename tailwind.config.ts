@@ -8,11 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
         'ibp-light-grey': '#00000029',
         'ibp-dark-grey': '#929292',
@@ -25,6 +20,7 @@ const config: Config = {
       },
       boxShadow: {
         card: '0px 0px 20px #00000029',
+        btn: '0px 0px 6px #00000029',
       },
     },
   },
