@@ -11,7 +11,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 
 function Button({ children, onClick }: PropsWithChildren<{ onClick?: () => void }>) {
   return (
-    <button onClick={onClick} className="w-11 bg-white aspect-square flex items-center justify-center shadow-btn">{children}</button>
+    <button onClick={onClick} className="flex aspect-square w-11 items-center justify-center bg-white shadow-btn">{children}</button>
 
   )
 }
@@ -27,7 +27,7 @@ export default function ProductsSliderClient({ products }: { products: Array<Pro
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="gap-3 justify-end relative z-10 hidden md:flex">
+      <div className="relative z-10 hidden justify-end gap-3 md:flex">
         <Button onClick={prev}><FontAwesomeIcon icon={faChevronLeft} /></Button>
         <Button onClick={next}><FontAwesomeIcon icon={faChevronRight} /></Button>
       </div>
