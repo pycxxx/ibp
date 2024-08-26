@@ -1,13 +1,14 @@
 {
   "extends": [
-    "next/core-web-vitals",
     "eslint:recommended",
+    "next",
     "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "root": true,
   "rules": {
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "indent": ["error", 2]
   }
 }

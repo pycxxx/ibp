@@ -6,7 +6,7 @@ export interface ProductsSliderProps {
 }
 
 export default async function ProductsSlider({ num = 6 }: ProductsSliderProps) {
-    const products = await getProducts(num)
+  const products = await getProducts(num)
 
-    return <ProductsSliderClient products={products} />
+  return <ProductsSliderClient products={products} />
 }
