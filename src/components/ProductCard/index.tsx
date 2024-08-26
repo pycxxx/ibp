@@ -6,6 +6,7 @@ import { format } from 'date-fns/format'
 
 export interface ProductCardProps {
     data: Product
+    priority?: boolean
 }
 
 const formatCurrency = (value: number) => {
@@ -21,12 +22,12 @@ const productTypeText = (type: ProductType) => {
     return type === ProductType.Prebuilt ? 'Prebuilt PC' : 'Custom PC'
 }
 
-export default function ProductCard({ data }: ProductCardProps) {
+export default function ProductCard({ data, priority }: ProductCardProps) {
     return (
-        <div className="shadow-card rounded-card bg-white max-width-[398px] min-w-[398px]">
+        <div className="shadow-card rounded-card bg-white">
             <div className="px-5 py-3 md:px-6 md:py-4">
                 <span className="border border-ibp-dark-grey text-ibp-dark-grey text-[8px] md:text-xs font-bold rounded-full py-1 px-2">{productTypeText(data.type)}</span>
-                <Image className="mx-auto mt-2 w-[172px] md:w-[230px]" alt={`Image of ${data.name}`} src={data.image} width={230} height={230} />
+                <Image className="mx-auto mt-2 w-[172px] md:w-[230px]" alt={`Image of ${data.name}`} src={data.image} width={230} height={230} priority={priority} />
                 <span className="block mt-4 mb-5 md:mb-6 text-base md:text-2xl bold">{data.name}</span>
                 <div className="flex flex-col gap-2 text-xs">
                     <span>{data.os}</span>
