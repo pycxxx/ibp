@@ -1,0 +1,102 @@
+import { Product, ProductType } from "./models";
+
+const products: Array<Product> = [
+    {
+        id: '1',
+        image: '/images/p1.png',
+        type: ProductType.Prebuilt,
+        name: 'RDY Y60 005',
+        os: 'Windows 11 Home',
+        cpu: 'Intel® Core™ i9-14900KF CPU',
+        gpu: 'GeForce RTX 4070 SUPER - 12GB',
+        storage: '2TB M.2 NVMe SSD',
+        memory: '32GB DDR5-6000MHz RGB RAM',
+        listPrice: 2349,
+        retailPrice: 1899,
+        installmentPeriod: 24,
+        deliveryDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 12).toISOString(),
+    },
+    {
+        id: '2',
+        image: '/images/p2.png',
+        type: ProductType.Custom,
+        name: 'RDY Y60 006',
+        os: 'Windows 11 Home',
+        cpu: 'Intel® Core™ i9-14900KF CPU',
+        gpu: 'GeForce RTX 4070 SUPER - 12GB',
+        storage: '2TB M.2 NVMe SSD',
+        memory: '32GB DDR5-6000MHz RGB RAM',
+        listPrice: 2349,
+        retailPrice: 1899,
+        installmentPeriod: 24,
+        deliveryDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 3).toISOString(),
+    },
+    {
+        id: '3',
+        image: '/images/p3.png',
+        type: ProductType.Custom,
+        name: 'RDY Y60 007',
+        os: 'Windows 11 Home',
+        cpu: 'Intel® Core™ i9-14900KF CPU',
+        gpu: 'GeForce RTX 4070 SUPER - 12GB',
+        storage: '2TB M.2 NVMe SSD',
+        memory: '32GB DDR5-6000MHz RGB RAM',
+        listPrice: 2349,
+        retailPrice: 1899,
+        installmentPeriod: 24,
+        deliveryDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).toISOString(),
+    },
+    {
+        id: '4',
+        image: '/images/p4.png',
+        type: ProductType.Prebuilt,
+        name: 'RDY Y60 008',
+        os: 'Windows 11 Home',
+        cpu: 'Intel® Core™ i9-14900KF CPU',
+        gpu: 'GeForce RTX 4070 SUPER - 12GB',
+        storage: '2TB M.2 NVMe SSD',
+        memory: '32GB DDR5-6000MHz RGB RAM',
+        listPrice: 2349,
+        retailPrice: 1899,
+        installmentPeriod: 24,
+        deliveryDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 6).toISOString(),
+    },
+    {
+        id: '5',
+        image: '/images/p5.png',
+        type: ProductType.Prebuilt,
+        name: 'RDY Y60 009',
+        os: 'Windows 11 Home',
+        cpu: 'Intel® Core™ i9-14900KF CPU',
+        gpu: 'GeForce RTX 4070 SUPER - 12GB',
+        storage: '2TB M.2 NVMe SSD',
+        memory: '32GB DDR5-6000MHz RGB RAM',
+        listPrice: 2349,
+        retailPrice: 1899,
+        installmentPeriod: 24,
+        deliveryDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7).toISOString(),
+    },
+    {
+        id: '6',
+        image: '/images/p6.png',
+        type: ProductType.Custom,
+        name: 'RDY Y60 010',
+        os: 'Windows 11 Home',
+        cpu: 'Intel® Core™ i9-14900KF CPU',
+        gpu: 'GeForce RTX 4070 SUPER - 12GB',
+        storage: '2TB M.2 NVMe SSD',
+        memory: '32GB DDR5-6000MHz RGB RAM',
+        listPrice: 2349,
+        retailPrice: 1899,
+        installmentPeriod: 24,
+        deliveryDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 8).toISOString(),
+    }
+]
+
+export async function getProducts(count = 1) {
+    return new Promise<Array<Product>>((resolve) => {
+        setTimeout(() => {
+            resolve(products.slice(0, count))
+        }, 1000)
+    })
+}
