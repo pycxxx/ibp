@@ -1,7 +1,6 @@
 import { Product, ProductType } from '@/libs/api'
 import Image from 'next/image'
-// 這邊用 SVG 比較好，但需要另外設定，所以先用 PNG
-import affirmIcon from './black_logo-transparent_bg.png'
+import AffirmIcon from './icon-affirm.svg'
 import { format } from 'date-fns/format'
 
 export interface ProductCardProps {
@@ -42,7 +41,7 @@ export default function ProductCard({ data, priority }: ProductCardProps) {
         <div className="mt-2">
           <span className="text-xl md:text-3xl bold">{formatCurrency(data.listPrice)}</span>
           <span className="line-through text-ibp-dark-grey text-xs md:text-lg inline-block ml-2">{formatCurrency(data.retailPrice)}</span>
-          <p className="text-xs md:text-xl">Starting at <span className="text-ibp-blue">{formatCurrency((data.retailPrice / data.installmentPeriod))}/mo</span> with <Image className="inline-block -mt-[6px] h-3 md:h-4 w-auto" alt="Affirm Logo" height={16} src={affirmIcon} /></p>
+          <p className="text-xs md:text-xl">Starting at <span className="text-ibp-blue">{formatCurrency((data.retailPrice / data.installmentPeriod))}/mo</span> with <AffirmIcon className="inline-block -mt-[6px] h-7 md:h-10 w-auto" alt="Affirm Logo" /></p>
         </div>
         <div className="flex mt-4">
           <div className="flex flex-col flex-1">

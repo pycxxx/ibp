@@ -3,6 +3,9 @@
 import ProductCard from '@/components/ProductCard';
 import { Product } from '@/libs/api';
 import { useDeviceType } from '@/libs/responsive';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PropsWithChildren, useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 
@@ -25,8 +28,8 @@ export default function ProductsSliderClient({ products }: { products: Array<Pro
   return (
     <div className="flex flex-col gap-5">
       <div className="gap-3 justify-end relative z-10 hidden md:flex">
-        <Button onClick={prev}>prev</Button>
-        <Button onClick={next}>next</Button>
+        <Button onClick={prev}><FontAwesomeIcon icon={faChevronLeft} /></Button>
+        <Button onClick={next}><FontAwesomeIcon icon={faChevronRight} /></Button>
       </div>
       <Swiper
         onSwiper={setSwiper}
